@@ -1,7 +1,6 @@
-# Intellij
-.idea/
-.iml
-.iws
-# Maven
-log/
-target/
+target/*
+.settings/*
+.project
+.classpath
+.gitignore
+/target/
