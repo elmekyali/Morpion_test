@@ -19,7 +19,6 @@ public class Morpion {
         CoordinateParser coordinateParser = new CoordinateParser();
         PlayerParser playerParser = new PlayerParser();
         Pair dim = coordinateParser.parse(dimension);
-
         this.morpionBoard = new MorpionBoard(dim.getLine(), dim.getColumn());
         this.firstPlayer = playerParser.parse(firstPlayer);
         this.firstPlayer.playIn(morpionBoard);
