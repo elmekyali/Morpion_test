@@ -50,6 +50,6 @@ public class MorpionTest {
 				.append(Morpion.LINE_SEPARATOR).append("O|O|X")
 				.append(Morpion.LINE_SEPARATOR).append("X|O|X")
 				.append(Morpion.LINE_SEPARATOR).toString();
-		assertEquals(expectedDisplay.toString(), game.display());
+		assertEquals(expectedDisplay, game.display());
 	}
 }

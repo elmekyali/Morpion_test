@@ -21,15 +21,13 @@ public class Morpion {
         Pair dim = coordinateParser.parse(dimension);
         this.morpionBoard = new MorpionBoard(dim.getLine(), dim.getColumn());
         this.firstPlayer = playerParser.parse(firstPlayer);
-        this.firstPlayer.playIn(morpionBoard);
         this.secondPlayer = playerParser.parse(secondPlayer);
-        this.secondPlayer.playIn(morpionBoard);
     }
 
     public void play(String player, String coordinate_) {
         CoordinateParser coordinateParser = new CoordinateParser();
         Pair coordinate = coordinateParser.parse(coordinate_);
-        getPlayer(player).select(coordinate.getLine(), coordinate.getColumn());
+        getPlayer(player).select(coordinate.getLine(), coordinate.getColumn(), this.morpionBoard);
     }
 
     private Player getPlayer(String player) {
